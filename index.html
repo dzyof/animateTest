@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf8">
+  
+  <link rel="stylesheet" href="animate.css">
+  <link rel="stylesheet" href="style.css">
+  <script src = " https://yastatic.net/jquery/2.2.3/jquery.min.js" ></script>
+  
+  <title>Animate.CSS</title>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+  <div class="main">
+    <h1 class="animated tada" >Animate.CSS</h1>
+    <h2 class="animated swing">примеры и практика:</h2>
+    
+    <h3 >Название анимации</h3>
+    <img class="animated mov" src="images/dog1.jpg" alt="Собака - лучший друг человека">
+    <p class="animated wobble"><em>(классы)</em></p>
+    
+    <h3">Название анимации</h3>
+    <img class="animated mov" src="images/dog2.jpg" alt="Собака - лучший друг человека">
+    <p><em>(классы)</em></p>
+    
+    <h3 ">Название анимации</h3>
+    <img class="animated mov" src="images/dog3.jpg" alt="Собака - лучший друг человека">
+    <p><em>(классы)</em></p>
+    
+    <h3>Простая картинка</h3>
+    <img class="animated mov" src="images/dog4.jpg" alt="Собака - лучший друг человека">
+    <p><em>(без анимации)</em></p>
+    
+  </div>
+
+  <script >
+    $(window).scroll(function() {
+    $('.mov').each(function(){
+      var imagePos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+200) {
+        $(this).addClass('wobble');
+      }
+    });
+  });
+  </script>
+</body>
+</html>
